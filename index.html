@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rock Paper Scissors</title>
+        <meta name="viewport" content="width=device-width initial-scale=1">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="shortcut icon" href="rps1.ico" type="tab icon">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Campeonato Mundial De Piedra, Papel o Tijera
+            </h1>
+        </header>
+        <main>
+            <section>
+                <div id="scorerMarker">
+                    <div id="me" class="scores">0</div>
+                    <div id="draw" class="scores">0</div>
+                    <div id="computer" class="scores">0</div>
+                </div>
+                <div id="arena">
+                    <div id="divLeft" class="divRPS"></div>
+                    <div id="divLeftMark" class="xvMark">
+                        <div id="imgL" class="xvImg"><img id="bannerImgL" src=""/></div>
+                    </div>
+                    <div id="divRightMark" class="xvMark">
+                        <div id="imgR" class="xvImg"><img id="bannerImgR" src=""/></div>
+                    </div>
+                    <div id="divRight" class="divRPS"></div>
+                </div>
+            </section>
+            <div class="menu">
+                <ul id="list">
+                    <li >
+                        <button type="button" class="menuButton" id="menu1"><h2>Piedra</h2></button>
+                    </li>
+                    <li>
+                        <button type="button" class="menuButton" id="menu2"><h2>Papel</h2></button>
+                    </li>
+                    <li>
+                        <button type="button" class="menuButton" id="menu3"><h2>Tijera</h2></button>
+                    </li>
+                </ul>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+            </div>
+            </footer>
+        <script src="piedraPapelTijera.js"></script>
+    </body>
+</html>  

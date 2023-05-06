@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../../Head First JavaScript/battleship"
+		},
+		{
+			"path": "../../../../Head First JavaScript"
+		},
+		{
+			"path": "../../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Platzi"
+	}
+}
