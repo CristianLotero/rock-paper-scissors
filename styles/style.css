@@ -205,7 +205,11 @@ img {
     border-radius: 7px;
 }
 
-.menu1 {
+.menu img {
+    border-radius: 50%;
+}
+
+/* .menu1 {
 grid-area: piedra;
 }
 
@@ -215,18 +219,20 @@ grid-area: papel;
 
 .menu2 {
 grid-area: tijera;
-}
+} */
 
 .menu ul{
-    display: grid;
     list-style: none;
+    display: grid;
     grid-auto-flow: column;
+    place-items: center;
+    margin: auto;
     gap: 3em;
 }
 
-.menu li {
-    border-style: none ;
+.menu ul li {
     border-radius: 2px;
+    margin: auto;
     
 }
 
