@@ -14,9 +14,18 @@ body {
 }
 
 header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
     text-align: center;
     margin: 2% 25% 2% 25%;
     background-color: transparent;
+}
+
+header img {
+    height: 25rem;
+    width: auto;
 }
 
 main {
@@ -33,8 +42,10 @@ main {
 
 h1 {
     font-size: calc(0.7rem + 3vw);
-    margin: auto;
+    margin: 2rem;
+
 }
+
 
 section {
     display: grid;
@@ -49,6 +60,9 @@ section {
 #scorerMarker {
     display: grid;
     grid-auto-flow: column;
+    grid-template-areas: 
+        'yo draw IA'
+        'yo draw IA';
     grid-template-columns: auto auto auto;
     grid-area: score;
     justify-self: center;
@@ -56,7 +70,7 @@ section {
     justify-items: center;
     align-items: center;
     margin-bottom: 5vh ;
-    padding: 1.5rem;
+    padding: 2.5rem 0rem;
     width: 20vw;
     height: 4vh;
     /* background-color: rgb(218, 168, 60); */
@@ -64,6 +78,11 @@ section {
     color: black;
     border: 3px solid black;
     border-radius: 15px;
+}
+
+.scoreImg {
+    height: 3rem;
+    width: auto;
 }
 
 .scores {
@@ -156,6 +175,7 @@ img {
     margin: auto;
     overflow: hidden;
 }
+
 /* 
 .footer {
     display: grid;
@@ -172,13 +192,15 @@ img {
 .menu {
     grid-area: choice;
     display: grid;
+    justify-self: center;
     grid-template-areas: 
         'piedra papel tijera';
-        justify-content: center;
-        align-items: center;
+    justify-content: center;
+    align-items: center;
     margin: 2em;
     padding: 1em;
-    height: 200px;
+    height: 20vh;
+    width: 45vw;
     background-color: var(--main-color);
     border-radius: 7px;
 }
