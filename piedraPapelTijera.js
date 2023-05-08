@@ -25,11 +25,13 @@ let bannerOutFinalValue = -100;
 let bannerFinalValue = bannerOutFinalValue ;
 let bannerIn = true;
 let delayTime = 5;
+let bannerDeployTime = 1500;
 let rocksPapersScissorsTotalImg = 14
-let loseImg = "xv/x2.jpg";
-let winImg = "xv/v2.jpg";
-let errorImg = "xv/error0.webp";
-let error404 = "xv/error404.png";
+let loseWinDrawTotalImg = 8;
+let loseImg = "";
+let winImg = "";
+let drawImg = "";
+let error404 = "xv/draw1.jpg";
 let meScore = 0;
 let drawScore = 0;
 let computerScore = 0;
@@ -38,26 +40,63 @@ let computerScore = 0;
 const rocks = [];
 const papers = [];
 const scissors = [];
+const loses = [];
+const wins = [];
+const draws = [];
 
-function RockPaperScissors(id,src) {
+
+function imgPush(id,src) {
     this.id = id;
     this.src = src;
 };
 
+//lwd = lose Win Draw
+let lwdPush = function() {
+    for (i=0 ; i < loseWinDrawTotalImg + 1; i++) {
+        let lose = new imgPush("x" + i , "xv/x" + i + ".jpg");
+        let win = new imgPush("v" + i , "xv/v" + i + ".jpg");
+        let draw = new imgPush("draw" + i , "xv/draw" + i + ".jpg");
+        loses.push(lose);
+        wins.push(win);
+        draws.push(draw);
+    }
+}();
+
+//rps = rock paper scissors
 let rpsPush = function() {
     for (i=0; i < (rocksPapersScissorsTotalImg + 1); i++){
-        let rock = new RockPaperScissors ("piedra"+ i , "1xLado/piedra" + i + ".gif");
-        let paper = new RockPaperScissors ("papel"+ i , "1xLado/papel" + i + ".gif");
-        let scissor = new RockPaperScissors ("tijera"+ i , "1xLado/tijera" + i + ".gif");
+        let rock = new imgPush ("piedra"+ i , "1xLado/piedra" + i + ".gif");
+        let paper = new imgPush ("papel"+ i , "1xLado/papel" + i + ".gif");
+        let scissor = new imgPush ("tijera"+ i , "1xLado/tijera" + i + ".gif");
         rocks.push(rock);
         papers.push(paper);
         scissors.push(scissor);
     }
 }();
 
+(()=> {
+    let loseWinPairIndex = Math.floor( Math.random() * loseWinDrawTotalImg);
+    let drawIndex = Math.floor (Math.random() * loseWinDrawTotalImg);
+    loseImg = "xv/x" + loseWinPairIndex + ".jpg" ;
+    winImg = "xv/v" + loseWinPairIndex + ".jpg";
+    drawImg = "xv/draw" + drawIndex + ".jpg";
+})();
+
 function makeItRandom() {  
     randomImgIndex = Math.floor(Math.random() * rocksPapersScissorsTotalImg);
     return randomImgIndex;
+};
+
+function disableButtons() {
+    rockButton.disabled = true;
+    paperButton.disabled = true;
+    scissorButton.disabled = true;
+    let totalDelay = ((bannerDeployTime * 2) - (bannerDeployTime * 0.4));
+    setTimeout(() =>{ 
+        rockButton.disabled = false;
+        paperButton.disabled = false;
+        scissorButton.disabled = false;
+    },totalDelay);
 };
 
 
@@ -80,13 +119,14 @@ let prossesGame = {
     },
     parseChoices: function(myChoice, computerChoice){
         this.imagesDisplay(myChoice, computerChoice);
-        let outcome = myChoice === computerChoice ? this.resultBanners(errorImg, errorImg, "b")
+        let outcome = myChoice === computerChoice ? this.resultBanners(drawImg, drawImg, "b")
         : (myChoice === 0 && computerChoice === 1) || (myChoice === 1 && computerChoice === 2) || (myChoice === 2 && computerChoice === 0) ? this.resultBanners(loseImg, winImg, "c")
         : (myChoice === 0 && computerChoice === 2) || (myChoice === 1 && computerChoice === 0) || (myChoice === 2 && computerChoice === 1) ? this.resultBanners(winImg, loseImg, "a") : this.resultBanners(error404, error404);
     },
     resultBanners: function(myResult, compResult, refreshScore){
         this.bannerDeploy(bannerFinalValue);
-        setTimeout(()=>{this.bannerDeploy(bannerFinalValue)}, 1500);
+        disableButtons();
+        setTimeout(()=>{this.bannerDeploy(bannerFinalValue)}, bannerDeployTime);
         document.querySelector("#bannerImgL").setAttribute("src", myResult);
         document.querySelector("#bannerImgR").setAttribute("src", compResult);
         this.scoreCounter(refreshScore);
