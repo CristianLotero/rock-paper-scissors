@@ -1,5 +1,4 @@
 
-
 let lImg = new Image();
 lImg.src = "1xLado/eventos/holdOn.gif";
 document.querySelector("#divLeft").appendChild(lImg);
@@ -19,7 +18,6 @@ scissorButton.addEventListener("click", ()=>{prossesGame.parseChoices(2, prosses
 let divLeftMark = document.querySelector("#divLeftMark");
 let divRightMark = document.querySelector("#divRightMark");
 
-
 let bannerInFinalValue = 0;
 let bannerOutFinalValue = -100;
 let bannerFinalValue = bannerOutFinalValue ;
@@ -36,14 +34,12 @@ let meScore = 0;
 let drawScore = 0;
 let computerScore = 0;
 
-
 const rocks = [];
 const papers = [];
 const scissors = [];
 const loses = [];
 const wins = [];
 const draws = [];
-
 
 function imgPush(id,src) {
     this.id = id;
@@ -98,7 +94,6 @@ function disableButtons() {
         scissorButton.disabled = false;
     },totalDelay);
 };
-
 
 let prossesGame = {
     ComputerRandomChoice: function (){
@@ -155,8 +150,6 @@ let prossesGame = {
         },delayTime);
     }
 };
-
-
 
 // closures- lexical enviroments
 // function makeSuperAdder (x) {
