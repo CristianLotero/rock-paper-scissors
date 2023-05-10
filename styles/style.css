@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --main-color: rgb(64, 224, 176);
     --second-color: rgb(234, 134, 238);
@@ -43,8 +49,6 @@ main {
 
 h1 {
     font-size: calc(0.7rem + 3vw);
-    margin: 2rem;
-
 }
 
 
@@ -72,8 +76,8 @@ section {
     align-items: center;
     margin-bottom: 5vh ;
     padding: 2.5rem 0rem;
-    width: 15rem;
-    height: 6rem;
+    width: 25em;
+    height: 10em;
     /* background-color: rgb(218, 168, 60); */
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
