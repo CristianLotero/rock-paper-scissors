@@ -1,0 +1,12 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: rgb(64, 224, 176);
+    --second-color: rgb(234, 134, 238);
+    --third-color: rgb(201, 201, 4);
+    --backgroundImage: url("../background_images/background9.jpg");
+}
