@@ -6,7 +6,7 @@
 
 :root {
     --main-color: rgb(64, 224, 176);
-    --second-color: rgb(234, 134, 238);
+    --second-color: rgb(197, 83, 16);
     --third-color: rgb(201, 201, 4);
     --backgroundImage: url("../background_images/background15.jpg");
 }
@@ -15,7 +15,7 @@
 body {
     background-color: rgb(255, 255, 255);
     margin: 20px;
-    color: var(--main-color);
+    color: var(--second-color);
     font-family: Georgia;
 }
 
@@ -25,9 +25,9 @@ header{
     justify-content: center;
     align-content: center;
     text-align: center;
-    margin: 2% 25% 2% 25%;
+    margin: 2em;
     padding: 1em;
-    background-color: red;
+    background-color: var(--main-color);
     border-radius: 7%;
 }
 
