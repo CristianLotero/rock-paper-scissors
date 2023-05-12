@@ -1,0 +1,32 @@
+:root {
+    --main-color: rgb(64, 224, 176);
+    --second-color: rgb(197, 83, 16);
+    --third-color: rgb(201, 201, 4);
+    --backgroundImage: url("../background_images/background15.jpg");
+}
+
+
+header{
+    display: grid;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 2em;
+    padding: 1em;
+    background-color: var(--main-color);
+    border-radius: 10px;
+}
+
+header img {
+    align-self: center;
+    justify-self: center;
+    max-height: 50%;
+    width: auto;
+}
+
+main {
+    display:  grid;
+    align-self: center;
+    justify-self: center;
+}
