@@ -1,6 +1,6 @@
 let startButton = document.querySelector(".start");
-startButton.addEventListener("click" , goToRockPaperScissors());
+startButton.addEventListener("click" , goToRockPaperScissors);
 
 function goToRockPaperScissors() {
-    window.open("rockPaperScissors.html", _self);
+    window.open("rockPaperScissors.html", "_self");
 }
