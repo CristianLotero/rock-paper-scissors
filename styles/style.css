@@ -21,13 +21,14 @@ body {
 
 header{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-content: center;
     text-align: center;
     margin: 2% 25% 2% 25%;
     padding: 1em;
     background-color: red;
+    border-radius: 7%;
 }
 
 header img {
