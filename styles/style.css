@@ -6,7 +6,7 @@
 
 :root {
     --main-color: rgb(64, 224, 176);
-    --second-color: rgb(197, 83, 16);
+    --second-color: rgb(15, 160, 179);
     --third-color: rgb(201, 201, 4);
     --backgroundImage: url("../background_images/background15.jpg");
 }
@@ -14,25 +14,8 @@
 
 body {
     background-color: rgb(255, 255, 255);
-    margin: 20px;
     color: var(--second-color);
-    font-family: Georgia;
-}
-
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    margin: 2em;
-    padding: 1em;
-    background-color: var(--main-color);
-    border-radius: 7%;
-}
-
-header img {
-    height: 40svh;
+    height: 97vmax;
     width: auto;
 }
 
@@ -40,7 +23,7 @@ main {
     display: grid;
     grid-template-areas: 
         'section'
-        'choice'
+        /* 'choice' */
         'menu';
     justify-content: center;
     align-content: center;
@@ -75,11 +58,10 @@ section {
     align-content: center;
     justify-items: center;
     align-items: center;
-    margin-bottom: 5vh ;
+    margin-bottom: 7em ;
     padding: 2.5rem 0rem;
     width: 25em;
     height: 10em;
-    /* background-color: rgb(218, 168, 60); */
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
     border: 3px solid black;
@@ -87,7 +69,7 @@ section {
 }
 
 .scoreImg {
-    height: 3rem;
+    height: 6rem;
     width: auto;
 }
 
@@ -104,6 +86,7 @@ section {
     'leftPlayer leftMark rightMark rightPlayer';
     grid-auto-flow: column ;
     grid-template-columns: auto auto auto auto;
+    width: 97vw;
 } 
 
 
@@ -123,9 +106,14 @@ section {
 }
 
 
-@media only screen and (max-height: 720px), (min-height: 880px) {
+@media only screen and (min-width: 1080px){
     #divLeft, #divRight {
-        border:var(--main-color) solid 3px;
+        body {
+            background-color: rgb(255, 255, 255);
+            color: var(--second-color);
+            height: 97vh;
+            width: 98vmax;
+        } 
     }
 }
 
@@ -196,7 +184,7 @@ img {
 
 
 .menu {
-    grid-area: choice;
+    grid-area: menu;
     display: grid;
     justify-self: center;
     grid-template-areas: 
