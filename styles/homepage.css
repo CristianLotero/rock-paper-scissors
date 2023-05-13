@@ -5,6 +5,10 @@
     --backgroundImage: url("../background_images/background15.jpg");
 }
 
+body{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 
 header{
     display: grid;
@@ -30,3 +34,22 @@ main {
     align-self: center;
     justify-self: center;
 }
+
+footer {
+    text-align: center;
+}
+
+footer img {
+    display: inline;
+    position: relative;
+    max-height: 1em;
+    width: auto;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    bottom: 0%;
+}
+
+/* footer h3 {
+    height: 3em;
+    width: auto;
+} */
