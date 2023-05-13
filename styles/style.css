@@ -13,6 +13,8 @@
 
 
 body {
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
     background-color: rgb(255, 255, 255);
     color: var(--second-color);
     height: 97vmax;
@@ -30,11 +32,6 @@ main {
     column-gap: 15vw;
     padding: 1rem;
 }
-
-h1 {
-    font-size: calc(0.7rem + 3vw);
-}
-
 
 section {
     display: grid;
@@ -107,15 +104,14 @@ section {
 
 
 @media only screen and (min-width: 1080px){
-    #divLeft, #divRight {
-        body {
-            background-color: rgb(255, 255, 255);
-            color: var(--second-color);
-            height: 97vh;
-            width: 98vmax;
-        } 
-    }
-}
+    body {
+        background-color: rgb(255, 255, 255);
+        color: var(--second-color);
+        height: 97vh;
+        width: 98vmax;
+    } 
+ }
+
 
 
 #divLeftMark {
@@ -128,7 +124,7 @@ section {
 #divRightMark {
     position: relative;
     grid-area: rightMark;
-    height: fit-content;
+    /* height: fit-content; */
     right: -100%;
 }
 
@@ -148,15 +144,15 @@ section {
 .xvMark {
     border: 4px solid rgb(171, 180, 201);
     border-radius: 5%;
-    width: 70px;
-    height: auto;
+    width: 150px;
+    height: 150px;
     z-index: -1;
 }
 
 .xvImg {
     position: relative;
-    width: 70px;
-    height: 70px;
+    width: 100%;
+    height: auto;
     align-self: center;
 }
 
@@ -169,19 +165,6 @@ img {
     margin: auto;
     overflow: hidden;
 }
-
-/* 
-.footer {
-    display: grid;
-    grid-auto-flow: column;
-    grid-area: menu;
-    background-color: var(--main-color);
-    width: auto;
-    height: 5lvh;
-    justify-content: center;
-    align-content: center;
-} */
-
 
 .menu {
     grid-area: menu;
@@ -199,21 +182,9 @@ img {
     border-radius: 7px;
 }
 
-.menu img {
+.menu img, .menu button {
     border-radius: 50%;
 }
-
-/* .menu1 {
-grid-area: piedra;
-}
-
-.menu2 {
-grid-area: papel;
-}
-
-.menu2 {
-grid-area: tijera;
-} */
 
 .menu ul{
     list-style: none;
@@ -224,11 +195,11 @@ grid-area: tijera;
     gap: 3em;
 }
 
-.menu ul li {
+/* .menu ul li {
     border-radius: 2px;
     margin: auto;
     
-}
+} */
 
 .menu ul li button {
     background-color: beige;
