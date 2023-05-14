@@ -114,6 +114,7 @@ section {
         color: var(--second-color);
         height: auto;
         width: 97vmin;
+        justify-content: center;
     } 
     #arena {
         grid-area: arena;
@@ -123,7 +124,8 @@ section {
         'rightMark rightPlayer';
         row-gap: 10svh;
         grid-template-columns:  max-content max-content;
-    } 
+        place-content: center;
+        margin: auto ;    } 
     #imgL {
         width: var(--banner-size);
     }
@@ -148,7 +150,6 @@ section {
 #divRightMark {
     position: relative;
     grid-area: rightMark;
-    /* height: fit-content; */
     right: -100%;
     width: var(--banner-size);
     height: var(--banner-size);
@@ -170,7 +171,7 @@ section {
     border-radius: 5%;
     width: var(--banner-width);
     height: var(--banner-width);
-    /* z-index: -1; */
+    z-index: -1;
 }
 
 .xvImg {
