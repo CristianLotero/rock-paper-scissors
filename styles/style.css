@@ -14,7 +14,7 @@
 
 body {
     display: grid;
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 1fr;
     background-color: rgb(255, 255, 255);
     color: var(--second-color);
     height: 97vmax;
@@ -25,10 +25,8 @@ main {
     display: grid;
     grid-template-areas: 
         'section'
-        /* 'choice' */
         'menu';
-    justify-content: center;
-    align-content: center;
+    align-items: center;    
     column-gap: 15vw;
     padding: 1rem;
 }
@@ -103,7 +101,7 @@ section {
 }
 
 
-@media only screen and (min-width: 1080px){
+@media only screen and (min-width: 900px){
     body {
         background-color: rgb(255, 255, 255);
         color: var(--second-color);
@@ -132,10 +130,8 @@ section {
     display: grid;
     justify-content: center;
     align-content: center;
-    width: 30vw;
-    height: 45vh;
-    min-width: 400px;
-    min-height: 300px;
+    width: 450px;
+    height: 300px;
     /* overflow: hidden; */
     border-radius: 7px;
 
@@ -173,11 +169,12 @@ img {
     grid-template-areas: 
         'piedra papel tijera';
     justify-content: center;
+    align-content: center;
     align-items: center;
     margin: 2em;
     padding: 1em;
-    height: 20vh;
-    width: 45vw;
+    height: 15vh;
+    width: 35vw;
     background-color: var(--main-color);
     border-radius: 7px;
 }
@@ -186,31 +183,17 @@ img {
     border-radius: 50%;
 }
 
-.menu ul{
-    list-style: none;
-    display: grid;
-    grid-auto-flow: column;
-    place-items: center;
-    margin: auto;
-    gap: 3em;
-}
-
-/* .menu ul li {
-    border-radius: 2px;
-    margin: auto;
-    
-} */
-
-.menu ul li button {
+.menu button {
     background-color: beige;
     color: var(--main-color);
     width: 100px;
     height: 100px;
+    margin: 2em;
     border-radius: 50% ;
     border: outset 2px rgb(27, 134, 98);
 }
 
-.menu ul li button:hover {
+.menu button:hover {
     transition-duration: 0.25s;
     cursor: pointer;
     color: red;
