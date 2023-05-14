@@ -11,14 +11,18 @@
     --backgroundImage: url("../background_images/background15.jpg");
 }
 
+html {
+    height: 100vmax;
+    width: auto;
+}
 
 body {
     display: grid;
     grid-template-rows: 1fr;
     background-color: rgb(255, 255, 255);
     color: var(--second-color);
-    height: 97vmax;
-    width: auto;
+    height: auto;
+    width: 97vmin;
 }
 
 main {
@@ -80,7 +84,7 @@ section {
     grid-template-areas: 
     'leftPlayer leftMark rightMark rightPlayer';
     grid-auto-flow: column ;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
     width: 97vw;
 } 
 
@@ -94,6 +98,7 @@ section {
 
 
 #divLeft {
+    place-self: end;
     grid-area: leftPlayer;
     border: black solid 3px;
     background-image: var(--backgroundImage);
@@ -101,13 +106,27 @@ section {
 }
 
 
-@media only screen and (min-width: 900px){
+@media only screen and (max-width: 1080px){
     body {
         background-color: rgb(255, 255, 255);
         color: var(--second-color);
-        height: 97vh;
-        width: 98vmax;
+        height: auto;
+        width: 97vmin;
     } 
+    #arena {
+        grid-area: arena;
+        display: grid;
+        grid-template-areas: 
+        'leftPlayer leftMark'
+        'rightMark rightPlayer';
+        row-gap: 10svh;
+        grid-template-columns: 2fr 0.5fr;
+        /* width: 97vmin; */
+    } 
+    #imgL {
+        place-self: start;
+    }
+
  }
 
 
@@ -116,6 +135,7 @@ section {
     position: relative;
     grid-area: leftMark;
     align-self: self-end;
+    place-self: end;
     left: -100%;
 }
 
@@ -131,9 +151,9 @@ section {
     justify-content: center;
     align-content: center;
     width: 450px;
-    height: 300px;
+    height: 350px;
     /* overflow: hidden; */
-    border-radius: 7px;
+    border-radius: 10px;
 
 }
 
@@ -142,7 +162,7 @@ section {
     border-radius: 5%;
     width: 150px;
     height: 150px;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .xvImg {
@@ -201,7 +221,7 @@ img {
     box-shadow: 0 0 2em  rgb(202, 3, 3);
 }
 
-.menu ul li button:active {
+.menu button:active {
     color: var(--main-color);
     background-color: beige ;
     border-style: none;
