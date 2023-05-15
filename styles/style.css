@@ -84,9 +84,9 @@ section {
     grid-area: arena;
     display: grid;
     grid-template-areas: 
-    'leftPlayer leftMark rightMark rightPlayer';
+    'leftPlayer leftPlayer leftPlayer leftMark rightMark rightPlayer rightPlayer rightPlayer';
     grid-auto-flow: column ;
-    grid-template-columns: 2fr 0.5fr 0.5fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr var(--banner-size) var(--banner-size) 1fr 1fr 1fr;
     width: 97vw;
 } 
 
@@ -120,12 +120,14 @@ section {
         grid-area: arena;
         display: grid;
         grid-template-areas: 
-        'leftPlayer leftMark'
-        'rightMark rightPlayer';
-        row-gap: 10svh;
-        grid-template-columns:  max-content max-content;
+        'leftPlayer leftPlayer leftPlayer leftMark'
+        'rightMark rightPlayer rightPlayer';
+        row-gap: 10dvh;
+        /* grid-template-columns:  max-content max-content; */
         place-content: center;
-        margin: auto ;    } 
+        margin: auto ;
+        /* width: 100dvh; */
+    } 
     #imgL {
         width: var(--banner-size);
     }
@@ -133,7 +135,7 @@ section {
         width: var(--banner-size);
     }
 
- }
+}
 
 
 
@@ -202,8 +204,8 @@ img {
     align-items: center;
     margin: 2em;
     padding: 1em;
-    height: 15vh;
-    width: 35vw;
+    height: 15dvh;
+    width: 35dvw;
     background-color: var(--main-color);
     border-radius: 7px;
 }

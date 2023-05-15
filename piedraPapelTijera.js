@@ -18,11 +18,11 @@ scissorButton.addEventListener("click", ()=>{prossesGame.parseChoices(2, prosses
 let divLeftMark = document.querySelector("#divLeftMark");
 let divRightMark = document.querySelector("#divRightMark");
 
-let element = document.querySelector("#divRightMark");
-let valorDeAjuste = element.style.width;
+// let element = document.querySelector("#divRightMark");
+// let valorDeAjuste = element.style.width;
 
-let bannerInFinalValue = (-valorDeAjuste);
-let bannerOutFinalValue = 0;
+let bannerInFinalValue = 0;
+let bannerOutFinalValue = -100;
 let bannerFinalValue = bannerOutFinalValue ;
 let bannerIn = true;
 let delayTime = 5;
