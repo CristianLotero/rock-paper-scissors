@@ -204,8 +204,8 @@ img {
     align-items: center;
     margin: 2em;
     padding: 1em;
-    height: 15dvh;
-    width: 35dvw;
+    height: auto;
+    width: 33%;
     background-color: var(--main-color);
     border-radius: 7px;
 }
