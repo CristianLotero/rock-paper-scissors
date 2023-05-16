@@ -108,7 +108,7 @@ section {
 }
 
 
-@media only screen and (max-width: 1080px){
+@media only screen and (max-width: 768px){
     body {
         background-color: rgb(255, 255, 255);
         color: var(--second-color);
@@ -121,12 +121,12 @@ section {
         display: grid;
         grid-template-areas: 
         'leftPlayer leftPlayer leftPlayer leftMark'
-        'rightMark rightPlayer rightPlayer';
-        row-gap: 10dvh;
+        'rightMark rightPlayer rightPlayer rightPlayer';
+        row-gap: 15dvh;
         /* grid-template-columns:  max-content max-content; */
         place-content: center;
         margin: auto ;
-        /* width: 100dvh; */
+        width: 97svw;
     } 
     #imgL {
         width: var(--banner-size);
