@@ -61,8 +61,8 @@ section {
     align-items: center;
     margin-bottom: 7em ;
     padding: 2.5rem 0rem;
-    width: 25em;
-    height: 10em;
+    width: 30%;
+    height: auto;
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
     border: 3px solid black;
@@ -78,6 +78,7 @@ section {
     border: 2px solid red;
     padding: 1em;
     border-radius: 25%;
+    font-size: 2em;
 }
 
 .arena {
@@ -108,7 +109,7 @@ section {
 }
 
 
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1080px){
     body {
         background-color: rgb(255, 255, 255);
         color: var(--second-color);
@@ -116,7 +117,7 @@ section {
         width: 97vmin;
         justify-content: center;
     } 
-    #arena {
+    .arena {
         grid-area: arena;
         display: grid;
         grid-template-areas: 
@@ -126,7 +127,7 @@ section {
         /* grid-template-columns:  max-content max-content; */
         place-content: center;
         margin: auto ;
-        width: 97svw;
+        width: 97%;
     } 
     #imgL {
         width: var(--banner-size);
@@ -134,6 +135,10 @@ section {
     #imgR {
         width: var(--banner-size);
     }
+    .menu {
+        width: 100%;
+    }
+
 
 }
 
@@ -205,7 +210,7 @@ img {
     margin: 2em;
     padding: 1em;
     height: auto;
-    width: 33%;
+    width: 40%;
     background-color: var(--main-color);
     border-radius: 7px;
 }
