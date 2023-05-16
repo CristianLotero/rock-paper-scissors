@@ -47,7 +47,7 @@ section {
     align-items: center;
 }
 
-#scorerMarker {
+.scorerMarker {
     display: grid;
     grid-auto-flow: column;
     grid-template-areas: 
@@ -80,7 +80,7 @@ section {
     border-radius: 25%;
 }
 
-#arena {
+.arena {
     grid-area: arena;
     display: grid;
     grid-template-areas: 
