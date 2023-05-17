@@ -86,7 +86,7 @@ section {
     grid-area: arena;
     display: grid;
     grid-template-areas: 
-    'leftPlayer leftPlayer leftPlayer leftMark rightMark rightPlayer rightPlayer rightPlayer';
+    'leftPlayer leftPlayer leftPlayer leftBanner rightBanner rightPlayer rightPlayer rightPlayer';
     grid-auto-flow: column ;
     grid-template-columns: 1fr 1fr 1fr var(--banner-size) var(--banner-size) 1fr 1fr 1fr;
     width: 97vw;
@@ -124,15 +124,16 @@ section {
     .arena {
         grid-area: arena;
         display: grid;
+        grid-auto-flow: column;
         grid-template-areas: 
-        'leftPlayer leftPlayer leftPlayer leftMark'
-        'rightMark rightPlayer rightPlayer rightPlayer';
-        row-gap: 15dvh;
-        /* grid-template-columns:  max-content max-content; */
-        place-content: center;
+        'leftPlayer leftPlayer leftPlayer leftBanner'
+        'rightBanner rightPlayer rightPlayer rightPlayer';
+        row-gap: 7dvh;
+        /* place-content: center; */
         margin: auto ;
         width: 97%;
     } 
+    .
     #imgL {
         width: var(--banner-size);
     }
@@ -148,9 +149,9 @@ section {
 
 
 
-#divLeftMark {
+#leftBanner {
     position: relative;
-    grid-area: leftMark;
+    grid-area: leftBanner;
     align-self: self-end;
     place-self: end;
     left: var(-(--banner-size));
@@ -158,9 +159,9 @@ section {
     height: var(--banner-size);
 }
 
-#divRightMark {
+#rightBanner {
     position: relative;
-    grid-area: rightMark;
+    grid-area: rightBanner;
     right: var(-(--banner-size));
     width: var(--banner-size);
     height: var(--banner-size);
@@ -173,7 +174,11 @@ section {
     width: var(--arena-size);
     height: var(--arena-size);
     /* overflow: hidden; */
-    border-radius: 10px;
+    border-radius: 30px;
+}
+
+.divRPS img {
+    border-radius: 30px;
 
 }
 

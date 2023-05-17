@@ -15,10 +15,10 @@ rockButton.addEventListener("click", ()=>{prossesGame.parseChoices(0, prossesGam
 paperButton.addEventListener("click", ()=>{prossesGame.parseChoices(1, prossesGame.ComputerRandomChoice())});
 scissorButton.addEventListener("click", ()=>{prossesGame.parseChoices(2, prossesGame.ComputerRandomChoice())});
 
-let divLeftMark = document.querySelector("#divLeftMark");
-let divRightMark = document.querySelector("#divRightMark");
+let leftBanner = document.querySelector("#leftBanner");
+let rightBanner = document.querySelector("#rightBanner");
 
-// let element = document.querySelector("#divRightMark");
+// let element = document.querySelector("#rightBanner");
 // let valorDeAjuste = element.style.width;
 
 let bannerInFinalValue = 0;
@@ -142,8 +142,8 @@ let prossesGame = {
             } else {
                 x -= 1;
             }
-            divLeftMark.style["left"] = x + "%";
-            divRightMark.style["right"] = x + "%";
+            leftBanner.style["left"] = x + "%";
+            rightBanner.style["right"] = x + "%";
             if (x===bannerInFinalValue || x===bannerOutFinalValue ) {
                 clearInterval(myInterval);
                 bannerIn = !bannerIn;
