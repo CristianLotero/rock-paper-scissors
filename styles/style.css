@@ -61,7 +61,7 @@ section {
     align-items: center;
     margin-bottom: 7em ;
     padding: 2.5rem 0rem;
-    width: 30%;
+    width: auto;
     height: auto;
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
@@ -117,6 +117,9 @@ section {
         width: 97vmin;
         justify-content: center;
     } 
+    .scorerMarker {
+
+    }
     .arena {
         grid-area: arena;
         display: grid;
