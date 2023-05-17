@@ -110,7 +110,7 @@ section {
 }
 
 
-@media only screen and (max-width: 1080px){
+@media only screen and (max-width: 1150px){
     body {
         background-color: rgb(255, 255, 255);
         color: var(--second-color);
@@ -118,22 +118,26 @@ section {
         width: 97vmin;
         justify-content: center;
     } 
-    .scorerMarker {
-
-    }
     .arena {
         grid-area: arena;
         display: grid;
         grid-auto-flow: column;
         grid-template-areas: 
-        'leftPlayer leftPlayer leftPlayer leftBanner'
-        'rightBanner rightPlayer rightPlayer rightPlayer';
+        'leftPlayer leftBanner'
+        'nada nada rightBanner rightPlayer ';
         row-gap: 7dvh;
-        /* place-content: center; */
-        margin: auto ;
+        /* margin: auto ; */
         width: 97%;
     } 
-    .
+    
+    #rightBanner {
+        position: relative;
+        grid-area: rightBanner;
+        right: var(-(--banner-size));
+        width: var(--banner-size);
+        height: var(--banner-size);
+    }
+
     #imgL {
         width: var(--banner-size);
     }
