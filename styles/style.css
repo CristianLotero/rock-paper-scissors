@@ -63,6 +63,7 @@ section {
     padding: 2.5rem 0rem;
     width: auto;
     height: auto;
+    min-width: 60%;
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
     border: 3px solid black;
