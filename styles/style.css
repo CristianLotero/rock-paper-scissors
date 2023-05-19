@@ -10,7 +10,7 @@
     --third-color: rgb(201, 201, 4);
     --backgroundImage: url("../background_images/background15.jpg");
     --banner-size: 10vmin;
-    --arena-size: 45vmin;
+    --arena-size: 40vmin;
 }
 
 html {
@@ -123,19 +123,21 @@ section {
         display: grid;
         grid-auto-flow: column;
         grid-template-areas: 
-        'leftPlayer leftBanner'
-        'nada nada rightBanner rightPlayer ';
+        'leftPlayer leftPlayer leftPlayer leftBanner'
+        'rightBanner rightPlayer rightPlayer rightPlayer';
         row-gap: 7dvh;
-        /* margin: auto ; */
+        margin: auto ;
         width: 97%;
+        /* background-color: rgb(185, 24, 163); */
     } 
     
-    #rightBanner {
-        position: relative;
-        grid-area: rightBanner;
-        right: var(-(--banner-size));
-        width: var(--banner-size);
-        height: var(--banner-size);
+    #divRight {
+        grid-area: rightPlayer;
+        border: rgb(109, 11, 11) solid 3px;
+        background-image: var(--backgroundImage);
+        background-size: cover;
+        place-self: end;
+        grid-column-start: 2;
     }
 
     #imgL {
@@ -178,11 +180,12 @@ section {
     width: var(--arena-size);
     height: var(--arena-size);
     /* overflow: hidden; */
-    border-radius: 30px;
+    border-radius: 5px;
 }
 
 .divRPS img {
-    border-radius: 30px;
+    min-height: 60vmin;
+    border-radius: 5px;
 
 }
 
