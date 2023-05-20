@@ -95,7 +95,7 @@ section {
 
 #divRight {
     grid-area: rightPlayer;
-    border: black solid 3px;
+    border: rgb(24, 136, 93) solid 3px;
     background-image: var(--backgroundImage);
     background-size: cover;
 }
@@ -122,6 +122,8 @@ section {
         grid-area: arena;
         display: grid;
         grid-auto-flow: column;
+        grid-template-columns: 3;
+        grid-template-rows: 2;
         grid-template-areas: 
         'leftPlayer leftPlayer leftPlayer leftBanner'
         'rightBanner rightPlayer rightPlayer rightPlayer';
@@ -133,10 +135,11 @@ section {
     
     #divRight {
         grid-area: rightPlayer;
-        border: rgb(109, 11, 11) solid 3px;
+        border: rgb(180, 11, 11) solid 3px;
         background-image: var(--backgroundImage);
         background-size: cover;
         place-self: end;
+        grid-row-start: 2;
         grid-column-start: 2;
     }
 
