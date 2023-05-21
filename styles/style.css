@@ -133,14 +133,18 @@ section {
         /* background-color: rgb(185, 24, 163); */
     } 
     
-    #divRight {
-        grid-area: rightPlayer;
-        border: rgb(180, 11, 11) solid 3px;
-        background-image: var(--backgroundImage);
-        background-size: cover;
+    #rightBanner {
+        position: relative;
+        grid-area: rightBanner;
+        right: var(-(--banner-size));
+        width: var(--banner-size);
+        height: var(--banner-size);
+        align-self: end;
         place-self: end;
-        grid-row-start: 2;
-        grid-column-start: 2;
+        /* grid-row-start: 2; */
+        grid-row-end: 2;
+        /* grid-column-start: 2; */
+        grid-column-end: 2;
     }
 
     #imgL {
