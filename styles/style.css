@@ -86,16 +86,16 @@ section {
     grid-area: arena;
     display: grid;
     grid-template-areas:
-    /* 'myName compName' */
-    'leftPlayer leftBanner rightBanner rightPlayer myName compName';
-    grid-auto-flow: column ;
+    'myName compName'
+    'leftPlayer leftBanner rightBanner rightPlayer';
+    /* grid-auto-flow: column ; */
     grid-column-end: span 2 span 2;
     /* grid-template-columns: 2fr 2fr var(--banner-size) var(--banner-size) 2fr 2fr; */
     width: 97vw;
 } 
 
 .myName {
-    position: relative;
+    position: absolute;
     display: grid;
     grid-area: myName;
     background-color: black;
@@ -107,7 +107,7 @@ section {
 }
 
 .compName {
-    position: relative;
+    position: absolute;
     display: grid;
     grid-area: compName;
     border-color: crimson solid 3px;
