@@ -109,25 +109,6 @@ section {
     background-size: cover;
 }
 
-#myName {
-    display: grid;
-    background-color: black;
-    border-color: crimson solid 3px;
-    height: 2em;
-    border-radius: 5px;
-}
-
-#compName {
-    display: grid;
-    background-color: rgb(24, 136, 93) solid 3px;
-    border-color: crimson solid 3px;
-    height: 2em;
-    border-radius: 5px;
-}
-
-
-
-
 @media only screen and (max-width: 1150px){
     body {
         background-color: rgb(255, 255, 255);
