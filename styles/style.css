@@ -56,6 +56,7 @@ section {
     grid-template-columns: auto auto auto;
     grid-area: score;
     justify-self: center;
+    /* align-self: end; */
     align-content: center;
     justify-items: center;
     align-items: center;
@@ -64,6 +65,7 @@ section {
     width: auto;
     height: 20vh;
     min-width: 60%;
+    max-width: max-content;
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
     border: 3px solid black;
@@ -143,6 +145,33 @@ section {
 
 
 @media only screen and (max-width: 1150px){
+    main {
+        display: grid;
+        grid-template-areas: 
+        'section'
+        'menu';
+        align-items: center;    
+    }
+    section {
+        display: grid;
+        grid-area: section;
+        grid-template-areas: 
+        'score'
+        'arena'
+        'arena'
+        'arena';
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+    .scorerMarker {
+        margin-bottom: 0;
+        width: auto;
+        height: 15vh;
+        min-height: max-content;
+        min-width: 60%;
+        align-self: end;
+    }
     .arena {
         display: grid;
         grid-area: arena;
@@ -156,37 +185,16 @@ section {
         width: 97%;
     } 
     
-    main {
-        display: grid;
-        grid-template-areas: 
-            'section'
-            'menu';
-        row: 1fr 3fr;
-        align-items: center;    
-    }
-    section {
-        display: grid;
-        grid-area: section;
-        grid-template-areas: 
-            'score'
-            'arena';
-        justify-content: center;
-        align-items: center;
-        height: 70vh;
-    }
-    .scorerMarker {
-        margin-bottom: 0;
-        width: auto;
-        height: 15vh;
-        min-height: max-content;
-        min-width: 60%;
-    }
     #divRight {
         grid-area: rightPlayer;
         border: rgb(180, 11, 11) solid 3px;
         /* background-image: var(--backgroundImage); */
         /* background-size: cover; */
         place-self: end;
+    }
+
+    .compName{
+        grid-row-start: 3;
     }
 
     #rightBanner {
@@ -200,18 +208,6 @@ section {
         /* grid-row-end: 2; */
         /* grid-column-end: 2; */
     }
-    
-
-    #imgL {
-        width: var(--banner-size);
-    }
-    #imgR {
-        width: var(--banner-size);
-    }
-    .menu {
-        width: 100%;
-    }
-
 
 }
 
