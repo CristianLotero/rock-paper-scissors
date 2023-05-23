@@ -98,29 +98,29 @@ section {
 
 
 .myName {
-    position: relative;
     display: grid;
     grid-area: myName;
-    background-color: black;
+    background-color: rgb(77, 33, 196);
     border-color: crimson solid 3px;
     height: max-content;
     width: max-content;
-    border-radius: 5px;
+    max-width: var(--arena-size);
+    border-radius: 8px;
     padding: 0.5em;
-    margin: 0 1em;
+    z-index: 2;
 }
 
 .compName {
-    position: relative;
     display: grid;
     grid-area: compName;
     border-color: crimson solid 3px;
     background-color: black;
-    height: max-content;
+    height: 4em;
     width: max-content;
-    border-radius: 5px;
+    max-width: var(--arena-size);
+    border-radius: 8px;
     padding: 0.5em;
-    margin: 0 1em;
+    z-index: 1;
 }
 
 #divRight {
