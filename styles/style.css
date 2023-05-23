@@ -82,6 +82,7 @@ section {
     font-size: 2em;
 }
 
+
 .arena {
     grid-area: arena;
     display: grid;
@@ -89,10 +90,12 @@ section {
     'myName compName'
     'leftPlayer leftBanner rightBanner rightPlayer';
     /* grid-auto-flow: column ; */
+    row-gap: 2em;
     grid-column-end: span 2 span 2;
     /* grid-template-columns: 2fr 2fr var(--banner-size) var(--banner-size) 2fr 2fr; */
     width: 97vw;
 } 
+
 
 .myName {
     position: absolute;
