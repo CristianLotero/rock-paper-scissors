@@ -7,7 +7,7 @@
 :root {
     --main-color: rgb(64, 224, 176);
     --second-color: rgb(15, 160, 179);
-    --third-color: rgb(201, 201, 4);
+    --third-color: red;
     --backgroundImage: url("../background_images/background15.jpg");
     --banner-size: 10vmin;
     --arena-size: 40vmin;
@@ -24,7 +24,7 @@ body {
     background-color: rgb(255, 255, 255);
     color: var(--second-color);
     height: auto;
-    width: 97vmin;
+    width: 97vw;
 }
 
 main {
@@ -33,7 +33,7 @@ main {
         'section'
         'menu';
     align-items: center;    
-    column-gap: 15vw;
+    column-gap: 10vw;
     padding: 1rem;
 }
 
@@ -62,7 +62,7 @@ section {
     margin-bottom: 7em ;
     padding: 2.5rem 0rem;
     width: auto;
-    height: auto;
+    height: 20vh;
     min-width: 60%;
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
     color: black;
@@ -76,50 +76,49 @@ section {
 }
 
 .scores {
-    border: 2px solid red;
+    border: 2px solid var(--third-color);
     padding: 1em;
     border-radius: 25%;
     font-size: 2em;
 }
 
-
 .arena {
     grid-area: arena;
     display: grid;
     grid-template-areas:
-    'myName compName'
+    'myName nada nada compName'
     'leftPlayer leftBanner rightBanner rightPlayer';
-    /* grid-auto-flow: column ; */
-    row-gap: 2em;
-    grid-column-end: span 2 span 2;
-    /* grid-template-columns: 2fr 2fr var(--banner-size) var(--banner-size) 2fr 2fr; */
-    width: 97vw;
+    grid-auto-flow: column ;
+    max-width: 97vw;
 } 
 
-
 .myName {
-    display: grid;
+    /* display: grid; */
     grid-area: myName;
-    background-color: rgb(77, 33, 196);
-    border-color: crimson solid 3px;
+    background-color: black;
+    color: white;
     height: max-content;
     width: max-content;
     max-width: var(--arena-size);
     border-radius: 8px;
+    justify-self: center;
+    text-align: center ;
     padding: 0.5em;
     z-index: 2;
 }
 
 .compName {
-    display: grid;
+    /* display: grid; */
     grid-area: compName;
-    border-color: crimson solid 3px;
     background-color: black;
-    height: 4em;
+    color: var(--third-color);
+    height: max-content;
     width: max-content;
     max-width: var(--arena-size);
     border-radius: 8px;
     padding: 0.5em;
+    justify-self: center;
+    text-align: center ;
     z-index: 1;
 }
 
@@ -128,6 +127,8 @@ section {
     border: rgb(24, 136, 93) solid 3px;
     background-image: var(--backgroundImage);
     background-size: cover;
+    width: var(--arena-size);
+    height: var(--arena-size);
 }
 
 #divLeft {
@@ -136,40 +137,56 @@ section {
     border: black solid 3px;
     background-image: var(--backgroundImage);
     background-size: cover;
+    width: var(--arena-size);
+    height: var(--arena-size);
 }
 
 
 @media only screen and (max-width: 1150px){
-    body {
-        background-color: rgb(255, 255, 255);
-        color: var(--second-color);
-        height: auto;
-        width: 97vmin;
-        justify-content: center;
-    } 
     .arena {
-        grid-area: arena;
         display: grid;
-        grid-auto-flow: column;
-        grid-template-columns: 3;
-        grid-template-rows: 2;
+        grid-area: arena;
+        grid-auto-flow: row;
         grid-template-areas: 
-        'leftPlayer leftBanner nada '
-        ' nada rightBanner rightPlayer';
-        row-gap: 7dvh;
-        margin: auto ;
+        'myName nada'
+        'leftPlayer leftBanner'
+        'espacio espacio'
+        'nada compName'
+        'rightBanner rightPlayer';
         width: 97%;
-        /* background-color: rgb(185, 24, 163); */
     } 
     
+    main {
+        display: grid;
+        grid-template-areas: 
+            'section'
+            'menu';
+        row: 1fr 3fr;
+        align-items: center;    
+    }
+    section {
+        display: grid;
+        grid-area: section;
+        grid-template-areas: 
+            'score'
+            'arena';
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+    .scorerMarker {
+        margin-bottom: 0;
+        width: auto;
+        height: 15vh;
+        min-height: max-content;
+        min-width: 60%;
+    }
     #divRight {
         grid-area: rightPlayer;
         border: rgb(180, 11, 11) solid 3px;
-        background-image: var(--backgroundImage);
-        background-size: cover;
+        /* background-image: var(--backgroundImage); */
+        /* background-size: cover; */
         place-self: end;
-        grid-row-start: 2;
-        grid-column-start: 2;
     }
 
     #rightBanner {
@@ -180,10 +197,8 @@ section {
         height: var(--banner-size);
         align-self: end;
         place-self: end;
-        /* grid-row-start: 2; */
-        grid-row-end: 2;
-        /* grid-column-start: 2; */
-        grid-column-end: 2;
+        /* grid-row-end: 2; */
+        /* grid-column-end: 2; */
     }
     
 
@@ -241,7 +256,7 @@ section {
     border-radius: 5%;
     width: var(--banner-size);
     height: var(--banner-size);
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .xvImg {
