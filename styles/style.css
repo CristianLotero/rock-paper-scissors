@@ -98,22 +98,26 @@ section {
 
 
 .myName {
+    position: relative;
     display: grid;
     grid-area: myName;
     background-color: black;
     border-color: crimson solid 3px;
     height: max-content;
+    width: max-content;
     border-radius: 5px;
     padding: 0.5em;
     margin: 0 1em;
 }
 
 .compName {
+    position: relative;
     display: grid;
     grid-area: compName;
     border-color: crimson solid 3px;
     background-color: black;
     height: max-content;
+    width: max-content;
     border-radius: 5px;
     padding: 0.5em;
     margin: 0 1em;
