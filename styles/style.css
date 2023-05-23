@@ -98,7 +98,6 @@ section {
 
 
 .myName {
-    position: absolute;
     display: grid;
     grid-area: myName;
     background-color: black;
@@ -110,7 +109,6 @@ section {
 }
 
 .compName {
-    position: absolute;
     display: grid;
     grid-area: compName;
     border-color: crimson solid 3px;
