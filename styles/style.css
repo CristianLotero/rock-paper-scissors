@@ -58,10 +58,8 @@ section {
     align-content: center;
     justify-items: center;
     align-items: center;
-
     justify-self:center;
     align-self: end;
-
     margin-top: 2em ;
     padding: 2.5rem 0rem;
     width: auto;
@@ -146,6 +144,26 @@ section {
 }
 
 
+
+
+#leftBanner {
+    position: relative;
+    grid-area: leftBanner;
+    align-self: self-end;
+    place-self: end;
+    left: var(-(--banner-size));
+    width: var(--banner-size);
+    height: var(--banner-size);
+}
+
+#rightBanner {
+    position: relative;
+    grid-area: rightBanner;
+    right: var(-(--banner-size));
+    width: var(--banner-size);
+    height: var(--banner-size);
+}
+
 @media only screen and (max-width: 1150px){
     main {
         display: grid;
@@ -181,7 +199,6 @@ section {
         grid-template-areas: 
         'myName nada'
         'leftPlayer leftBanner'
-        /* 'espacio espacio' */
         'nada compName'
         'rightBanner rightPlayer';
         width: 100vw;
@@ -189,26 +206,27 @@ section {
 
     .myName {
         grid-area: myName;
-        grid-row-start: 1;
+        /* grid-row-start: 1; */
     }
     #divLeft {
         grid-area: leftPlayer;
-        grid-row-start: 2;
+        /* grid-row-start: 2; */
     }
     #leftBanner {
         grid-area: leftBanner;
-        grid-row-start: 2;
+        /* grid-row-start: 2; */
     }
     .compName{
         grid-area: compName;
-        grid-row-start: 3;
+        grid-row-start: 2;
         align-self: end;
     }
     #rightBanner {
         grid-area: rightBanner;
         /* align-self: end; */
-        place-self: end;
-        grid-row-start: 3;
+        place-self: start;
+        grid-row: 3 / span 2;
+        /* grid-column: 3; */
     }
     #divRight {
         grid-area: rightPlayer;
@@ -219,26 +237,6 @@ section {
 
 
 
-}
-
-
-
-#leftBanner {
-    position: relative;
-    grid-area: leftBanner;
-    align-self: self-end;
-    place-self: end;
-    left: var(-(--banner-size));
-    width: var(--banner-size);
-    height: var(--banner-size);
-}
-
-#rightBanner {
-    position: relative;
-    grid-area: rightBanner;
-    right: var(-(--banner-size));
-    width: var(--banner-size);
-    height: var(--banner-size);
 }
 
 .divRPS {
