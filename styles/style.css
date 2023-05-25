@@ -161,13 +161,13 @@ section {
         'score'
         'arena'
         'arena'
+        'arena'
         'arena';
         justify-content: center;
         align-items: center;
-        height: 70vh;
+        height: 80vh;
     }
     .scorerMarker {
-        margin-bottom: 0;
         width: auto;
         height: 15vh;
         min-height: max-content;
@@ -181,35 +181,43 @@ section {
         grid-template-areas: 
         'myName nada'
         'leftPlayer leftBanner'
-        'espacio espacio'
+        /* 'espacio espacio' */
         'nada compName'
         'rightBanner rightPlayer';
-        width: 97%;
+        width: 100vw;
     } 
-    
+
+    .myName {
+        grid-area: myName;
+        grid-row-start: 1;
+    }
+    #divLeft {
+        grid-area: leftPlayer;
+        grid-row-start: 2;
+    }
+    #leftBanner {
+        grid-area: leftBanner;
+        grid-row-start: 2;
+    }
+    .compName{
+        grid-area: compName;
+        grid-row-start: 3;
+        align-self: end;
+    }
+    #rightBanner {
+        grid-area: rightBanner;
+        /* align-self: end; */
+        place-self: end;
+        grid-row-start: 3;
+    }
     #divRight {
         grid-area: rightPlayer;
         border: rgb(180, 11, 11) solid 3px;
-        /* background-image: var(--backgroundImage); */
-        /* background-size: cover; */
         place-self: end;
-    }
-
-    .compName{
         grid-row-start: 3;
     }
 
-    #rightBanner {
-        position: relative;
-        grid-area: rightBanner;
-        right: var(-(--banner-size));
-        width: var(--banner-size);
-        height: var(--banner-size);
-        align-self: end;
-        place-self: end;
-        /* grid-row-end: 2; */
-        /* grid-column-end: 2; */
-    }
+
 
 }
 
