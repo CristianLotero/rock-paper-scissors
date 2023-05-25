@@ -44,7 +44,7 @@ section {
         'score'
         'arena';
     justify-content: center;
-    align-items: center;
+    align-items: end;
 }
 
 .scorerMarker {
@@ -55,12 +55,14 @@ section {
         'yo draw IA';
     grid-template-columns: auto auto auto;
     grid-area: score;
-    justify-self: center;
-    /* align-self: end; */
     align-content: center;
     justify-items: center;
     align-items: center;
-    margin-bottom: 7em ;
+
+    justify-self:center;
+    align-self: end;
+
+    margin-top: 2em ;
     padding: 2.5rem 0rem;
     width: auto;
     height: 20vh;
