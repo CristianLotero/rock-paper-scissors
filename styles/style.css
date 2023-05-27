@@ -294,6 +294,7 @@ img {
         'nada compName'
         'rightBanner rightPlayer';
         width: clamp(97vw, 100%,100svw);
+        height: clamp(50%,50svh,950px);
     } 
 
     .myName {
