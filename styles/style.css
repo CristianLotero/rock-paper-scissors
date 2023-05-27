@@ -107,6 +107,7 @@ section {
     justify-self: center;
     text-align: center ;
     padding: 0.5em;
+    top: 50%;
     /* z-index: 2; */
 }
 
@@ -123,6 +124,7 @@ section {
     padding: 0.5em;
     justify-self: center;
     text-align: center ;
+    top: 50%;
     /* z-index: 1; */
 }
 
@@ -278,9 +280,8 @@ img {
     }
     .scorerMarker {
         width: auto;
-        height: 15vh;
-        min-height: max-content;
-        min-width: 60%;
+        height: clamp(15vh,15svh,15em) ;
+        width: clamp(40%,400px,40vw);
         align-self: end;
     }
     .arena {
@@ -292,7 +293,7 @@ img {
         'leftPlayer leftBanner'
         'nada compName'
         'rightBanner rightPlayer';
-        width: 100vw;
+        width: clamp(97vw, 100%,100svw);
     } 
 
     .myName {
@@ -306,7 +307,8 @@ img {
     }
     .compName{
         grid-area: compName;
-        grid-row: 2;
+        grid-row: 3;
+        top: -50%
     }
     #rightBanner {
         grid-area: rightBanner;
@@ -318,7 +320,10 @@ img {
         grid-area: rightPlayer;
         border: rgb(180, 11, 11) solid 3px;
         place-self: end;
-        grid-row-start: 3;
+        grid-row-start: 34;
+    }
+    .menu {
+        width: max(60%, 450px);
     }
 }
 /* 
