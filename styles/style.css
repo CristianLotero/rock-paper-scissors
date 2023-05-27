@@ -279,7 +279,6 @@ img {
         height: 80vh;
     }
     .scorerMarker {
-        width: auto;
         height: clamp(15vh,15svh,15em) ;
         width: clamp(40%,400px,40vw);
         align-self: end;
