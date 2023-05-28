@@ -33,8 +33,8 @@ main {
         'section'
         'menu';
     align-items: center;    
-    column-gap: 10vw;
     padding: 1rem;
+    height: clamp(10svh, 150px, 30%);
 }
 
 section {
@@ -323,7 +323,8 @@ img {
         grid-row-start: 34;
     }
     .menu {
-        width: max(60%, 450px);
+        height: clamp(10svh, 150px, 30%);
+        width: clamp(50%, 450px, 60svw);
     }
 }
 /* 
