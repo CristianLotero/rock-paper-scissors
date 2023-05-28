@@ -25,8 +25,6 @@ let bannerInFinalValue = 0;
 let bannerOutFinalValue = -100;
 let bannerFinalValue = bannerOutFinalValue ;
 let bannerIn = true;
-let namesInFinalValue = 0;
-let namesOutFinalValue = -100;
 let delayTime = 5;
 let bannerDeployTime = 1500;
 let rocksPapersScissorsTotalImg = 14
@@ -99,17 +97,6 @@ function disableButtons() {
         scissorButton.disabled = false;
     },totalDelay);
 };
-
-function namesDeploy() {
-    for(let i=100 ; i > 0 ; i--) {
-    let myInterval = setTimeout(()=> {
-            console.log("dale que se puede: " + i);
-            myName.style["top"] = i + "%";
-            compName.style["top"] = i + "%";
-        },200);
-    }
-}
-namesDeploy();
 
 
 let prossesGame = {
