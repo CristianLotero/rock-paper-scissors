@@ -10,7 +10,7 @@
     --third-color: red;
     --backgroundImage: url("../background_images/background15.jpg");
     --banner-size: 8vmin;
-    --arena-size: 40vmin;
+    --arena-size: clamp(100px ,40vmin, 40vh);
 }
 
 html {
@@ -33,8 +33,8 @@ main {
         'section'
         'menu';
     align-items: center;    
+    column-gap: 10vw;
     padding: 1rem;
-    height: clamp(10svh, 150px, 30%);
 }
 
 section {
@@ -102,7 +102,6 @@ section {
     color: white;
     height: max-content;
     width: max-content;
-    max-width: var(--arena-size);
     border-radius: 8px;
     justify-self: center;
     text-align: center ;
@@ -159,6 +158,8 @@ section {
     left: var(-(--banner-size));
     width: var(--banner-size);
     height: var(--banner-size);
+    left: -100%;
+    z-index: 2;
 }
 
 #rightBanner {
@@ -167,6 +168,8 @@ section {
     right: var(-(--banner-size));
     width: var(--banner-size);
     height: var(--banner-size);
+    right: -100%;
+    z-index: 2;
 }
 
 
@@ -222,7 +225,7 @@ img {
     align-items: center;
     margin: 2em;
     padding: 1em;
-    height: auto;
+    height: clamp(10svh, 150px, 30%);
     width: 40%;
     background-color: var(--main-color);
     border-radius: 7px;
@@ -279,6 +282,7 @@ img {
         height: 80vh;
     }
     .scorerMarker {
+        width: auto;
         height: clamp(15vh,15svh,15em) ;
         width: clamp(40%,400px,40vw);
         align-self: end;
@@ -293,7 +297,6 @@ img {
         'nada compName'
         'rightBanner rightPlayer';
         width: clamp(97vw, 100%,100svw);
-        height: clamp(50%,50svh,950px);
     } 
 
     .myName {
