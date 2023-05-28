@@ -159,7 +159,7 @@ section {
     width: var(--banner-size);
     height: var(--banner-size);
     left: -100%;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 #rightBanner {
@@ -169,7 +169,7 @@ section {
     width: var(--banner-size);
     height: var(--banner-size);
     right: -100%;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 
