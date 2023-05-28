@@ -105,9 +105,9 @@ section {
     border-radius: 8px;
     justify-self: center;
     text-align: center ;
-    padding: 0.5em;
+    padding: 0 0.6rem ;
     top: 50%;
-    /* z-index: 2; */
+    /* z-index: 1; */
 }
 
 .compName {
@@ -120,7 +120,7 @@ section {
     width: max-content;
     max-width: var(--arena-size);
     border-radius: 8px;
-    padding: 0.5em;
+    padding: 0 0.6em  ;
     justify-self: center;
     text-align: center ;
     top: 50%;
