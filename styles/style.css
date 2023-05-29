@@ -148,9 +148,6 @@ section {
     height: var(--arena-size);
 }
 
-
-
-
 #leftBanner {
     position: relative;
     grid-area: leftBanner;
@@ -164,21 +161,32 @@ section {
     z-index: 2;
 }
 
-#leftBanner img, #rightBanner img {
-    object-fit: contain;
+#leftBanner img {
+    /* object-fit: scale-down; */
+    position: relative;
     width: var(--banner-size);
-    height: auto;
-    margin: 0 0;
+    height: var(--banner-size);
+    /* margin: 0 0; */
 }
 
 #rightBanner {
     position: relative;
     grid-area: rightBanner;
-    right: var(-(--banner-size));
+    display: grid;
+    /* right: var(-(--banner-size)); */
     width: var(--banner-size);
     height: var(--banner-size);
     right: -100%;
     z-index: 2;
+}
+
+#rightBanner img {
+        /* object-fit: scale-down; */
+        position: relative;
+        display: grid;
+        width: var(--banner-size);
+        height: var(--banner-size);
+        margin: 0 0;
 }
 
 
@@ -216,7 +224,7 @@ section {
 
 
 .outcomeL {
-    /* position: relative; */
+    position: relative;
     display: grid;
     align-items: center;
     grid-column-start: 3;
@@ -228,14 +236,15 @@ section {
     writing-mode: vertical-rl;
     text-align: center;
     margin: 0;
-    right: -100%;
+    /* right: -100%; */
 }
 
 .outcomeR {
     position: relative;
     display: grid;
-    align-items: center;
-    grid-column-start: -1;
+    /* align-items: center; */
+    /* grid-column-start: -1; */
+    grid-row: 1;
     background-color: orangered !important;
     color: black;
     /* height: var(--outcome-size); */
@@ -249,9 +258,9 @@ section {
 
 img {
     object-fit: scale-down ;
-    max-width: 100%;
-    max-height: 100%;
-    align-self: center;
+    max-width: 98%;
+    max-height: 98%;
+    /* align-self: center; */
     margin: auto;
     overflow: hidden;
 }
