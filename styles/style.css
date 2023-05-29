@@ -240,20 +240,19 @@ section {
 }
 
 .outcomeR {
-    position: relative;
+    position: absolute;
     display: grid;
-    /* align-items: center; */
+    align-items: center;
     /* grid-column-start: -1; */
     grid-row: 1;
     background-color: orangered !important;
     color: black;
-    /* height: var(--outcome-size); */
     height: 80px;
     width: 1.3rem;
     writing-mode: vertical-rl;
     text-align: center;
     margin: 0;
-    right: var(--outcome-size);
+    right: 100%;
 }
 
 img {
