@@ -89,8 +89,8 @@ section {
     grid-area: arena;
     display: grid;
     grid-template-areas:
-    'myName nada nada nada nada compName'
-    'leftPlayer leftBanner outcomeL outcomeR rightBanner rightPlayer';
+    'myName nada  nada compName'
+    'leftPlayer leftBanner rightBanner rightPlayer';
     grid-auto-flow: column ;
     max-width: 97vw;
 } 
@@ -164,6 +164,13 @@ section {
     z-index: 2;
 }
 
+#leftBanner img, #rightBanner img {
+    object-fit: contain;
+    width: var(--banner-size);
+    height: auto;
+    margin: 0 0;
+}
+
 #rightBanner {
     position: relative;
     grid-area: rightBanner;
@@ -201,31 +208,43 @@ section {
 }
 
 .xvImg {
-    /* position: relative; */
-    width: 100%;
+    position: relative;
+    width: max-content;
     height: max-content;
     align-self: center;
 }
 
+
 .outcomeL {
-    position: relative;
+    /* position: relative; */
     display: grid;
+    align-items: center;
+    grid-column-start: 3;
     background-color: orangered !important;
+    color: black;
     /* height: var(--outcome-size); */
-    height: max-content;
+    height: 80px;
     width: 1.3rem;
     writing-mode: vertical-rl;
-    /* vertical-align: top; */
+    text-align: center;
+    margin: 0;
     right: -100%;
 }
 
 .outcomeR {
+    position: relative;
     display: grid;
-    grid-area: outcomeR;
-    writing-mode: vertical-lr;
-    height: max-content;
-    width: max-content;
-    left: -100%;
+    align-items: center;
+    grid-column-start: -1;
+    background-color: orangered !important;
+    color: black;
+    /* height: var(--outcome-size); */
+    height: 80px;
+    width: 1.3rem;
+    writing-mode: vertical-rl;
+    text-align: center;
+    margin: 0;
+    right: var(--outcome-size);
 }
 
 img {
