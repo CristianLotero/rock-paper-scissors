@@ -158,7 +158,7 @@ section {
     width: var(--banner-size);
     height: var(--banner-size);
     left: -100%;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 #leftBanner img {
@@ -177,7 +177,7 @@ section {
     width: var(--banner-size);
     height: var(--banner-size);
     right: -100%;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 #rightBanner img {
@@ -228,10 +228,10 @@ section {
     display: grid;
     align-items: center;
     grid-column-start: 3;
-    background-color: orangered !important;
-    color: black;
+    background-color:var(--third-color);
+    color: white;
     /* height: var(--outcome-size); */
-    height: 80px;
+    height: var(--banner-size);
     width: 1.3rem;
     writing-mode: vertical-rl;
     text-align: center;
@@ -245,9 +245,9 @@ section {
     align-items: center;
     /* grid-column-start: -1; */
     grid-row: 1;
-    background-color: orangered !important;
-    color: black;
-    height: 80px;
+    background-color: var(--third-color);
+    color: white;
+    height: var(--banner-size);
     width: 1.3rem;
     writing-mode: vertical-rl;
     text-align: center;
