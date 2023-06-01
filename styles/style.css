@@ -64,7 +64,7 @@ section {
     margin-top: 2em ;
     padding: 2.5rem 0rem;
     width: auto;
-    height: 20vh;
+    height: 240px;
     min-width: 60%;
     max-width: max-content;
     background: linear-gradient(to right, var(--main-color) 0%, var(--second-color) 50%, var(--second-color) 50%, var(--main-color) 100%);
@@ -333,7 +333,7 @@ img {
     }
     .scorerMarker {
         width: auto;
-        height: clamp(15vh,15svh,15em) ;
+        height: 240px ;
         width: clamp(40%,400px,40vw);
         align-self: end;
     }
